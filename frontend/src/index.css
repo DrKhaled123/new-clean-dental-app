@@ -1,0 +1,110 @@
+/* Global styles for the New Clean Dental App */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  .MuiPaper-root {
+    box-shadow: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Focus styles for accessibility */
+.MuiButton-root:focus,
+.MuiTextField-root:focus,
+.MuiIconButton-root:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom dialog styles */
+.MuiDialog-root .MuiPaper-root {
+  border-radius: 12px;
+}
+
+/* Table hover effects */
+.MuiTableRow-root:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+/* Responsive design helpers */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Form field spacing */
+.MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+/* Chip styles for status indicators */
+.MuiChip-root {
+  font-weight: 500;
+}
+
+/* Card hover effects */
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
